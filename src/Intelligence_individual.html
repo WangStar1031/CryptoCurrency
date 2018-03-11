@@ -148,7 +148,7 @@
 	$.ajax({
 		method: 'GET',
 		data: {},
-		url: "http://www.icaroai.com/icaroai/rest/charting/getFromWord/" + strFromName,
+		url: "http://93.58.124.32/icaroai/rest/charting/getFromWord/" + strFromName,
 		dataType: 'json',
 		success: function(data){
 			strWord = makeSentences(data);
@@ -157,7 +157,7 @@
 	$.ajax({
 		method: 'GET',
 		data: {},
-		url: "http://www.icaroai.com/icaroai/rest/charting/getFromScreenName/" + strFromName,
+		url: "http://93.58.124.32/icaroai/rest/charting/getFromScreenName/" + strFromName,
 		dataType: 'json',
 		success: function(data){
 			strScreenName = makeSentences(data);
@@ -166,7 +166,7 @@
 	$.ajax({
 		method: 'GET',
 		data: {},
-		url: "http://www.icaroai.com/icaroai/rest/charting/getFromHashtag/" + strFromName,
+		url: "http://93.58.124.32/icaroai/rest/charting/getFromHashtag/" + strFromName,
 		dataType: 'json',
 		success: function(data){
 			strHashtag = makeSentences(data);

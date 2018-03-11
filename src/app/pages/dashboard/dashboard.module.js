@@ -75,7 +75,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/getNewsJournal/" + _this.timePeriod,
+          url: "http://93.58.124.32/icaroai/rest/charting/getNewsJournal/" + _this.timePeriod,
           dataType: 'json',
           success: function(data){
             _this.newsJournal = data;
@@ -92,7 +92,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/getRedditFromTo/" + _this.timePeriod,
+          url: "http://93.58.124.32/icaroai/rest/charting/getRedditFromTo/" + _this.timePeriod,
           dataType: 'json',
           success: function(data){
             _this.reddit = data;
@@ -108,7 +108,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/getGetTweetsFromTo/" + _this.timePeriod,
+          url: "http://93.58.124.32/icaroai/rest/charting/getGetTweetsFromTo/" + _this.timePeriod,
           dataType: 'json',
           success: function(data){
             _this.twitter = data;
@@ -124,7 +124,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/get_currency/BTC",
+          url: "http://93.58.124.32/icaroai/rest/charting/get_currency/BTC",
           dataType: 'json',
           success: function(data){
             _this.CurrencyBTC = data;
@@ -140,7 +140,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/get_currency/ETH",
+          url: "http://93.58.124.32/icaroai/rest/charting/get_currency/ETH",
           dataType: 'json',
           success: function(data){
             _this.CurrencyETH = data;
@@ -156,7 +156,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/get_currency/XMR",
+          url: "http://93.58.124.32/icaroai/rest/charting/get_currency/XMR",
           dataType: 'json',
           success: function(data){
             _this.CurrencyXMR = data;
@@ -172,7 +172,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/get_currency/USDT",
+          url: "http://93.58.124.32/icaroai/rest/charting/get_currency/USDT",
           dataType: 'json',
           success: function(data){
             _this.CurrencyUSDT = data;
@@ -212,8 +212,8 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/chart/"+_this.mainType+"/"+_this.subType+"/12h",
-          // url: "http://www.icaroai.com/icaroai/rest/charting/chart/BTC/AMP/12h",
+          url: "http://93.58.124.32/icaroai/rest/charting/chart/"+_this.mainType+"/"+_this.subType+"/12h",
+          // url: "http://93.58.124.32/icaroai/rest/charting/chart/BTC/AMP/12h",
           dataType: 'json',
           success: function(data){
             // console.log(data);

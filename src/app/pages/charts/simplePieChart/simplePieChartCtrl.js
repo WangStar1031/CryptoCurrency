@@ -46,7 +46,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/getConfidenceChart/12h",
+          url: "http://93.58.124.32/icaroai/rest/charting/getConfidenceChart/12h",
           dataType: 'json',
           success: function(data){
             _this.pieChartData = data;

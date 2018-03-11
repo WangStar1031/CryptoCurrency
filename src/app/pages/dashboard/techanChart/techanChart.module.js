@@ -33,8 +33,8 @@
   //     $.ajax({
   //         method: 'GET',
   //         data: {},
-  //         url: "http://www.icaroai.com/icaroai/rest/charting/chart/"+_this.mainType+"/"+_this.subType+"/12h",
-  //         // url: "http://www.icaroai.com/icaroai/rest/charting/chart/BTC/AMP/12h",
+  //         url: "http://93.58.124.32/icaroai/rest/charting/chart/"+_this.mainType+"/"+_this.subType+"/12h",
+  //         // url: "http://93.58.124.32/icaroai/rest/charting/chart/BTC/AMP/12h",
   //         dataType: 'json',
   //         success: function(data){
   //           console.log(data);

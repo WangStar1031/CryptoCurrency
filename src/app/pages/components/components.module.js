@@ -36,7 +36,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/getTopScreenName",
+          url: "http://93.58.124.32/icaroai/rest/charting/getTopScreenName",
           dataType: 'json',
           success: function(data){
             _this.arrScreenNames = data;
@@ -51,7 +51,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/getGraphData/" + _nLevel + "/" + _nRelation,
+          url: "http://93.58.124.32/icaroai/rest/charting/getGraphData/" + _nLevel + "/" + _nRelation,
           dataType: 'json',
           success: function(data){
             _this.arrRelations = data;
@@ -72,7 +72,7 @@
       $.ajax({
         method : 'GET',
         data : {},
-        url : 'http://www.icaroai.com/icaroai/rest/charting/insertRelations/' + _MainNodeName + '/' + 2 +'/0000-01-31T00:00:42/9999-12-31T00:00:42',
+        url : 'http://93.58.124.32/icaroai/rest/charting/insertRelations/' + _MainNodeName + '/' + 2 +'/0000-01-31T00:00:42/9999-12-31T00:00:42',
         dataType : 'json',
         success : function(data){
           _this.nCount = data;

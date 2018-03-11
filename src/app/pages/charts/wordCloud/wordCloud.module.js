@@ -41,7 +41,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/getWordCloudNewsWord/2018-01-01T00:00:42/2018-01-10T00:00:42",
+          url: "http://93.58.124.32/icaroai/rest/charting/getWordCloudNewsWord/2018-01-01T00:00:42/2018-01-10T00:00:42",
           dataType: 'json',
           success: function(data){
             _this.newWordCloudSentence = _this.makeSentences(data);
@@ -51,7 +51,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/getWordCloudRedditWord/2018-01-01T00:00:42/2018-01-10T00:00:42",
+          url: "http://93.58.124.32/icaroai/rest/charting/getWordCloudRedditWord/2018-01-01T00:00:42/2018-01-10T00:00:42",
           dataType: 'json',
           success: function(data){
             _this.redditWordCloudSentence = _this.makeSentences(data);
@@ -61,7 +61,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/getWordCloudTweetsScreenName/2018-01-01T00:00:42/2018-01-10T00:00:42",
+          url: "http://93.58.124.32/icaroai/rest/charting/getWordCloudTweetsScreenName/2018-01-01T00:00:42/2018-01-10T00:00:42",
           dataType: 'json',
           success: function(data){
             _this.twittsWordCloudSentence = _this.makeSentences(data);
@@ -71,7 +71,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/getWordCloudTweetsHashtag/2018-01-01T00:00:42/2018-01-10T00:00:42",
+          url: "http://93.58.124.32/icaroai/rest/charting/getWordCloudTweetsHashtag/2018-01-01T00:00:42/2018-01-10T00:00:42",
           dataType: 'json',
           success: function(data){
             _this.twittsHashtagCloudSentence = _this.makeSentences(data);
@@ -81,7 +81,7 @@
       $.ajax({
           method: 'GET',
           data: {},
-          url: "http://www.icaroai.com/icaroai/rest/charting/getWordCloudTweetsWord/2018-01-01T00:00:42/2018-01-10T00:00:42",
+          url: "http://93.58.124.32/icaroai/rest/charting/getWordCloudTweetsWord/2018-01-01T00:00:42/2018-01-10T00:00:42",
           dataType: 'json',
           success: function(data){
             _this.twittsScreenNameCloudSentence = _this.makeSentences(data);
