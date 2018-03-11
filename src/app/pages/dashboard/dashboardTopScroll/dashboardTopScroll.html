@@ -1,0 +1,34 @@
+<style type="text/css">
+.marquee {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 20s linear infinite;
+    -webkit-animation: marquee 20s linear infinite;
+}
+
+.marquee:hover {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+/* Dibawah adalah Keyframe Marquee */
+@keyframes marquee {
+    0%   { text-indent: 0em }
+    100% { text-indent: -105em }
+}
+@-webkit-keyframes marquee {
+    0%   { text-indent: 0em }
+    100% { text-indent: -105em }
+}
+</style>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="col-lg-1">{{MainCurrency}}</div>
+    <div class="col-lg-11">
+      <p class="marquee">{{MainCurrencyPrice}}</p>
+    </div>
+  </div>
+</div>
