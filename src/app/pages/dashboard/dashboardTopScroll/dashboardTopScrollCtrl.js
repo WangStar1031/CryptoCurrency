@@ -18,6 +18,7 @@
     $scope.CurrencyETH = [];
     $scope.CurrencyXMR = [];
     $scope.CurrencyUSDT = [];
+    $scope.currencyForMarquee = [];
     $scope.$watch('service.getBTCData()', function(_newsData){
       $scope.CurrencyBTC = _newsData;
       $scope.makeMarqueeString();
@@ -32,16 +33,16 @@
       $scope.CurrencyUSDT = _newsData;
     });
     $scope.makeMarqueeString = function(){
-      var currencyForMarquee = [];
+      $scope.currencyForMarquee = [];
       switch($scope.mainCurrencyType){
-        case 0: currencyForMarquee = $scope.CurrencyBTC; break;
-        case 1: currencyForMarquee = $scope.CurrencyETH; break;
-        case 2: currencyForMarquee = $scope.CurrencyXMR; break;
-        case 3: currencyForMarquee = $scope.CurrencyUSDT; break;
+        case 0: $scope.currencyForMarquee = $scope.CurrencyBTC; $scope.MainCurrency = "BTC : "; break;
+        case 1: $scope.currencyForMarquee = $scope.CurrencyETH; $scope.MainCurrency = "ETH : "; break;
+        case 2: $scope.currencyForMarquee = $scope.CurrencyXMR; $scope.MainCurrency = "XMR : "; break;
+        case 3: $scope.currencyForMarquee = $scope.CurrencyUSDT; $scope.MainCurrency = "USDT : "; break;
       }
       $scope.MainCurrencyPrice = "";
-      for( var i = 0; i < currencyForMarquee.length; i++){
-        $scope.MainCurrencyPrice += currencyForMarquee[i].coin + ": " + currencyForMarquee[i].price + " ";
+      for( var i = 0; i < $scope.currencyForMarquee.length; i++){
+        $scope.MainCurrencyPrice += $scope.currencyForMarquee[i].coin + ": " + $scope.currencyForMarquee[i].price + " ";
       }
     }
     $scope.$watch('service.getCurrencyType()', function(_newsData){

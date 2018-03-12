@@ -20,7 +20,6 @@
     $scope.$watch('service.getNotify()', function(datas){
       $scope.chartData = [];
       var _newData = $scope.service.getTechanData();
-      console.log(_newData[0]);
       for(var i = 0; i < _newData.length; i++){
         var data = _newData[i];
         $scope.chartData.push({
@@ -30,14 +29,11 @@
           volume: data.sentiment//(data.sentiment == 0 ? -1 : 1)
         });
       }
-      // console.log($scope.chartData.length);
       if( $scope.chartData.length == 0) return;
-      console.log($scope.chartData[0]);
       $scope.drawChart();
     });
 
     $scope.generateChartData = function() {
-      console.log($scope.chartData[0]);
       return $scope.chartData;
     }
     $scope.predictionShow = function(){
@@ -62,15 +58,12 @@
       } else{
         if( $scope.techanChart.panels[0].stockGraphs.length == 1)return;
         var graph = $scope.techanChart.panels[0].stockGraphs.pop();
-        // $scope.techanChart.validateData();
-        // $scope.techanChart.removeGraph(graph);
       }
       $scope.techanChart.validateData();
     }
 
     $scope.drawChart = function(){
       if( $scope.techanChart == null){
-        console.log("makeChart");
         $scope.techanChart = AmCharts.makeChart("techanChart", {
             type: "stock",
             categoryAxesSettings: {
@@ -109,18 +102,7 @@
                   bulletBorderAlpha: 0.6,
                   bulletBorderThickness: 2,
                   balloonText:"[[value]]"
-                }/*,{
-                  id: "g2",
-                  valueField: "value1",
-                  type: "smoothedLine",
-                  lineThickness: 2,
-                  bullet: "round",
-                  bulletBorderColor: "#FFFFFF",
-                  bulletBorderAlpha: 0.6,
-                  bulletBorderThickness: 2,
-                  lineColor: "#FF0000",
-                  useDataSetColors: false
-                }*/],
+                }],
                 stockLegend: {
                   valueTextRegular: "[[value]]",
                   markerType: "none"
@@ -146,19 +128,6 @@
                 }
               }
             ],
-
-            // chartScrollbarSettings: {
-            //   graph: "g1",
-            //   usePeriod: "10mm",
-            //   updateOnReleaseOnly:false
-            // },
-
-            // chartCursorSettings: {
-            //   valueBalloonsEnabled: true,
-            //   valueLineEnabled: true,
-            //   valueLineBalloonEnabled: true
-            // },
-
             chartScrollbarSettings: {
               graph: "g1"
             },
@@ -200,21 +169,8 @@
               usePrefixes: true,
               creditsPosition: "bottom-right"
             },
-
-
-            // "export": {
-            //   "enabled": true,
-            //   // override some of the defaults (Stock Chart specific)
-            //   "periodSelector": {
-            //     "position": "left"
-            //   },
-            //   "dataSetSelector": {
-            //     "position": "left"
-            //   }
-            // }
         });
       } else{
-        console.log("validateData");
         $scope.techanChart.dataProvider = $scope.generateChartData();
         $scope.techanChart.validateData();
       }
@@ -224,5 +180,4 @@
     }, 1000 * 60 * 5);
     $scope.service.getTechanEntry();
   }
-
 })();

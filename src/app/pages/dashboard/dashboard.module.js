@@ -233,7 +233,7 @@
       return this.techanChartData;
     }
     this.setChartDataType = function(_mainType, _subType){
-      console.log("setChartDataType");
+      // console.log("setChartDataType");
       this.mainType = _mainType;
       this.subType = _subType;
       this.getTechanChartData(this);
